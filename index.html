@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Minion's Jump</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/logoimg.png" type="image/icon type">
+        <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+        <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+         <div class="menu" id="menuscreen">
+            <div class="title">
+             <text class ="minnion">MINNION</text>
+             <text class ="jump">JUMPING</text>
+            </div>
+
+            <!-- <text class="playbtn " id="playbtn" onclick="startGame();"> PLAY</text> -->
+            <button class="playbtn " onclick="startGame()">PLAY</button>
+            <div class="highscorediv" id="highscoreID"></div>
+             <div class="ScoreDiv" id="scoreid"></div>
+             <img class="logo" src="images/logoimg.png" />           
+         </div>
+
+         <div class="game" id="gamescreen">
+            <div class="ScoreCount" id="countid"></div>
+            <div class="lives"></div>
+        </div>
+           
+        <div id="wrapper"></div>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/audio.js" type="text/javascript"></script>
+    </body>
+</html>
