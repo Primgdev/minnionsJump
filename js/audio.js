@@ -12,9 +12,3 @@ playAudio=function(filename) {
     
 
 }
-
-stopAudio=function(elem)
-{
-    elem.muted = true;
-    elem.pause();
-}

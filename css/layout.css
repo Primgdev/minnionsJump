@@ -22,15 +22,6 @@
 body {
     background: black
 }
-#wrapper
-{
-    height:630px;
-    width:400px;
-    margin: 0 auto;	
-    position:relative;
-    overflow: hidden;
-    background-color: antiquewhite;
-}
 
 .title
 {
@@ -152,9 +143,7 @@ body {
     background: linear-gradient(90deg, rgba(25,114,224,0.9747141167192429) 50%, rgba(224,221,23,0.9589412460567823) 50%);
     height:630px;
     width:400px;
-    margin: 0 auto;	
-    background-repeat: no-repeat;   
-    background-position: top;
+    
     left: 330px;
     position: absolute;
     z-index: 14;
@@ -163,12 +152,23 @@ body {
 
 
 #gamescreen {
-    height:630px;
+    height:60px;
     width:460px;
     position: absolute;
     z-index: 13;
-    
    
+   
+}
+
+#wrapper
+{
+    height:630px;
+    width:400px;
+    margin: 0 auto;	
+    position:absolute;
+    background-color: antiquewhite;
+    left: 330px;
+    
 }
 
 
@@ -197,13 +197,13 @@ body {
     left: 50%;
     top: 65%;
     transform: translateX(-50%);
-  
+    border-radius: 30px;
      
 }
 
 .highscorediv {
     font: 30px titlefont;
-    color: darkgoldenrod;
+    color: black;
       margin-top: 30px;
     margin-left: 200px;
     
@@ -236,3 +236,4 @@ body {
 
 
 /*for menu screen*/
+

@@ -1,8 +1,10 @@
 var game = new MainGame();
+
 function startGame() {
-    
+
     document.getElementById("menuscreen").style.display = "none";
     game.init();
+   
 }
 
 
@@ -38,10 +40,10 @@ function MainGame()
         that.health = 3;
         that.breakRectangleIndexArray = [];
         that.springRectangleIndexArray = [];
-     
+       
 
 
-        playAudio("music/mainbg.mp3");
+         
 
         for (var i = 0; i < that.arrayOfRectangle.length; i++) {
 
@@ -64,6 +66,7 @@ function MainGame()
         that.createSpringrectangle();
         playerObj = new Player(that);
         playerObj.init();
+       // playAudio("music/mainbg.mp3");
         that.rectangleMoveDown = setInterval(that.mainGameLoop, 8);
 
         
@@ -151,6 +154,7 @@ function MainGame()
     this.forClearInterval=function()
     {
         clearInterval(that.rectangleMoveDown);
+        
     };
     
     this.rectangleMoveToDown = function(fastMove)
@@ -218,10 +222,8 @@ function MainGame()
             alert("YOU ARE OUT OF YOUR LIFE!");
             playAudio("music/ohhhh.mp3");
             document.getElementById("wrapper").removeChild(that.player);
-
             document.getElementById("playbtn");
             document.getElementsByClassName("ScoreDiv")[0].innerHTML = "Current Score : " + thatMainGame.score;
-
             document.getElementById("menuscreen").style.display = "block";
         }
        
@@ -253,6 +255,7 @@ function Player(thatMainGame)
         opponentObj=new Opponent(that);
         opponentObj.init();
         that.createPlayer();
+       
 
         
     };
@@ -263,6 +266,8 @@ function Player(thatMainGame)
         that.mainGameObj.gameBodyContainer.appendChild(that.player);
         that.player.style.left = that.playerX + "px";
         that.player.style.top = that.playerY + "px";
+       
+
 
     }; 
     
@@ -274,7 +279,7 @@ function Player(thatMainGame)
         if (that.bulletCreated == 1)
         {
             that.moveBulletUp();
-           stopAudio("music/mainbg.mp3");
+           
         }
 
         
@@ -301,6 +306,7 @@ function Player(thatMainGame)
             document.getElementsByClassName("lives")[0].innerHTML = "LIFE : "+ thatMainGame.health;
 //            that.player.style.backgroundImage="url('../images/moveUp.png')";
             that.opponentPlayerCollide();
+
             if (that.playerY < 0)
             {
               
@@ -332,6 +338,8 @@ function Player(thatMainGame)
             that.mainGameObj.forClearInterval();
 
             document.getElementById("wrapper").removeChild(that.player);
+          
+            
             try {
                 document.getElementById("wrapper").removeChild(that.bullet);
                 
@@ -340,12 +348,11 @@ function Player(thatMainGame)
 
             }
            
-          
+           
             document.getElementById("playbtn");
             document.getElementsByClassName("ScoreDiv")[0].innerHTML = "Current Score : "+thatMainGame.score;
             document.getElementById("menuscreen").style.display = "block";
-          
-             
+           
             
         }
     };
@@ -393,6 +400,7 @@ function Player(thatMainGame)
             that.bulletCreated=0;
             that.mainGameObj.gameBodyContainer.removeChild(that.bullet);
         }
+       
     };
     
     
