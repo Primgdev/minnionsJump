@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: titlefont;
+    src: url(../fonts/title.ttf);
+  }
+  
+
+@-webkit-keyframes bounce {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+
+
+body {
+    background: black
+}
+
+.title
+{
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.minnion
+{
+ 
+    font-size: 40px;
+    font-family:titlefont ;
+    color:#e0dd17;
+}
+
+.jump
+{
+   padding: 15px;
+    font-size: 40px;
+    font-family: titlefont;
+    color:#1972e0;
+}
+	
+.normalRectangle
+{
+    height:10px;
+    width:50px;
+    background-color:black;
+    position:absolute;
+    margin-right:5px;
+    border-radius: 10px;
+    top:0px;
+    left:0px;
+    z-index: 5;
+
+}
+.breakRectangle
+{
+    height:10px;
+    width:50px;
+    background-color:red;
+    position:absolute;
+    margin-right:5px;
+    border-radius: 10px;
+    top:0px;
+    left:0px;
+    z-index: 5;
+         
+
+}
+
+.springRectangle
+{
+    height:10px;
+    width:50px;
+    background-color:aqua;
+    position:absolute;
+    margin-right:5px;
+    border-radius: 10px;
+    top:0px;
+    left:0px;
+    z-index: 5;
+   
+}
+.player
+{
+    height:60px;
+    width:50px; 
+    background-color: transparent;
+    position: absolute;
+    border-radius: 10px;
+    top:0px;
+    left:0px;
+    z-index: 10;
+    background-image:url('../images/minionsSprites4.png');
+  background-position:0px 0px;
+    /*background-image:*/ 
+    /*background-image: url(../images/Evil_minion1.png);*/
+}
+ 
+
+.bullet
+{
+    height: 40px;
+    width: 10px;
+    background-image:url('../images/bulletImage.png');
+    /*background-color: blueviolet;*/
+    position: absolute;
+    z-index: 7;
+    
+}
+
+.opponent
+{
+    height:60px;
+    width:50px; 
+    background-color: transparent;
+    position: absolute;
+    border-radius: 10px;
+    background-image:url('../images/minionsSprites4.png');
+    background-position:-102px 0px;
+    z-index: 8;
+  
+}
+
+
+/*for menu screen*/
+
+                   
+#score {
+    position: absolute;
+    top:0px;
+    left: 139px;
+    z-index: 100;
+    font-size: 30px;
+    
+}
+#menuscreen {
+    background: linear-gradient(90deg, rgba(25,114,224,0.9747141167192429) 50%, rgba(224,221,23,0.9589412460567823) 50%);
+    height:630px;
+    width:400px;
+    
+    left: 330px;
+    position: absolute;
+    z-index: 14;
+    border: 5px whitesmoke double;
+}
+
+
+#gamescreen {
+    height:60px;
+    width:460px;
+    position: absolute;
+    z-index: 13;
+   
+   
+}
+
+#wrapper
+{
+    height:630px;
+    width:400px;
+    margin: 0 auto;	
+    position:absolute;
+    background-color: antiquewhite;
+    left: 330px;
+    
+}
+
+
+
+.logo {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+    -o-animation: bounce 2s infinite ease-in-out;
+    -ms-animation: bounce 2s infinite ease-in-out; 
+    -moz-animation: bounce 2s infinite ease-in-out; 
+    animation: bounce 2s infinite ease-in-out;
+}
+.menu img {
+    border-width: 0px;
+}
+.playbtn {
+    font: 40px titlefont;
+    background: antiquewhite;
+    padding: 10px;
+    color:black;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+     
+}
+
+.highscorediv {
+    font: 30px titlefont;
+    color: black;
+      margin-top: 30px;
+    margin-left: 200px;
+    
+}
+.ScoreDiv {
+    font: 30px titlefont;
+    color: black;
+    margin-top: 450px;
+    margin-left: 50px;
+    
+}
+
+.ScoreCount {
+    font: 20px titlefont;
+    color: black;
+    margin-top: 20px;
+    margin-left: 345px;
+    
+}
+
+.lives {
+    font: 20px titlefont;
+    color: black;
+    margin-top: 20px;
+    margin-left: 345px;
+    
+}
+
+
+
+
+/*for menu screen*/
+
