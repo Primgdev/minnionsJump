@@ -409,6 +409,9 @@ function Player(thatMainGame)
     this.detectPlayerRectanglecollide = function()
     {
     
+    this.detectPlayerRectanglecollide = function()
+    {
+        
         for (var i = 0; i < that.mainGameObj.arrayOfRectangle.length; i++)
         {
             var topofrectangle = that.mainGameObj.arrayOfRectangle[i].style.top;
@@ -441,6 +444,7 @@ function Player(thatMainGame)
                 else {
                     that.mainGameObj.arrayOfRectangle[i].style.backgroundColor = "yellow";
                     // that.mainGameObj.arrayOfRectangle[i].style.opacity = "0";
+                    that.mainGameObj.arrayOfRectangle[i].style.backgroundColor = "green";
                     goUp = 1;
                     thatMainGame.score += 100;
                    
@@ -596,4 +600,4 @@ function Opponent(playerthat)
 
 
 
-
+}
