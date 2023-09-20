@@ -85,6 +85,7 @@ function MainGame()
             that.rectangleY = i;
             that.rectangle.style.top = that.rectangleY + "px";
             that.rectangle.style.left = that.rectangleX + "px";
+            
 //            that.rectangle.innerHTML=i;
             that.rectangle.style.color = "red";
             that.arrayOfRectangle.push(that.rectangle);
@@ -404,9 +405,10 @@ function Player(thatMainGame)
     };
     
     
+   
     this.detectPlayerRectanglecollide = function()
     {
-        
+    
         for (var i = 0; i < that.mainGameObj.arrayOfRectangle.length; i++)
         {
             var topofrectangle = that.mainGameObj.arrayOfRectangle[i].style.top;
@@ -418,6 +420,8 @@ function Player(thatMainGame)
             var pl = that.playerX;
             if (tr == that.playerY + 60 && pl < rr && pr > lr)
 //            if(that.playerX<lr+50 && that.playerX+30>lr && that.playerY<tr+20 && 40+that.playerY>tr )
+
+
             {
                 if (that.mainGameObj.arrayOfRectangle[i].className == "breakRectangle")
                 {
@@ -435,7 +439,8 @@ function Player(thatMainGame)
                     goUp = 1;
                 }
                 else {
-                    that.mainGameObj.arrayOfRectangle[i].style.backgroundColor = "green";
+                    that.mainGameObj.arrayOfRectangle[i].style.backgroundColor = "yellow";
+                    // that.mainGameObj.arrayOfRectangle[i].style.opacity = "0";
                     goUp = 1;
                     thatMainGame.score += 100;
                    
